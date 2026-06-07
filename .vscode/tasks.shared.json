@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Openbase: Start Launchctl Services",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/openbase-coder",
+            "args": [
+                "services",
+                "start"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Openbase: Stop Launchctl Services",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/openbase-coder",
+            "args": [
+                "services",
+                "stop"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        }
+    ]
+}

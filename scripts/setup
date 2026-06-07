@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT_DIR="$( cd "$SCRIPT_DIR/.." && pwd )"
+
+# Clone the public/runtime install repos.
+pushd "$ROOT_DIR"
+multi sync --install-set default
+popd
+
+# Run the full local Openbase setup against this checkout, wherever it lives.
+SETUP_ARGS=("$@")
+SETUP_ARGS_COUNT=$#
+HAS_WORKSPACE_DIR=false
+HAS_SKIP_CLONE=false
+
+prepend_setup_args() {
+  if [ "$SETUP_ARGS_COUNT" -eq 0 ]; then
+    SETUP_ARGS=("$@")
+  else
+    SETUP_ARGS=("$@" "${SETUP_ARGS[@]}")
+  fi
+  SETUP_ARGS_COUNT=${#SETUP_ARGS[@]}
+}
+
+for arg in "$@"; do
+  case "$arg" in
+    --workspace-dir|--workspace-dir=*)
+      HAS_WORKSPACE_DIR=true
+      ;;
+    --skip-clone)
+      HAS_SKIP_CLONE=true
+      ;;
+  esac
+done
+
+if [ "$HAS_WORKSPACE_DIR" = false ]; then
+  prepend_setup_args --workspace-dir "$ROOT_DIR"
+fi
+
+if [ "$HAS_SKIP_CLONE" = false ]; then
+  prepend_setup_args --skip-clone
+fi
+
+pushd "${ROOT_DIR}"/cli
+uv run openbase-coder setup "${SETUP_ARGS[@]}"
+popd
+
+echo "Setup complete! Please restart your IDE, then you can run your project with the VS Code run button."

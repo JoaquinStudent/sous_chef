@@ -1,0 +1,31 @@
+{
+  "name": "@openbase/coder-ios-physical-e2e",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test support/iosDevices.test.ts",
+    "typecheck": "tsc --noEmit",
+    "e2e:ios:doctor": "tsx support/doctor.ts",
+    "manual:e2e:ios:basic-call-response": "OPENBASE_E2E_ALLOW_REAL_CODEX=1 OPENBASE_E2E_CONFIRM_REAL_CODEX=1 wdio run appium.config.ts --suite basicCallResponse",
+    "manual:e2e:ios:superagent-own-name": "OPENBASE_E2E_ALLOW_REAL_CODEX=1 OPENBASE_E2E_CONFIRM_REAL_CODEX=1 wdio run appium.config.ts --suite superagentOwnName",
+    "e2e:ios:audio:check": "tsx support/audio/checkAudio.ts",
+    "e2e:voice:check": "tsx support/voice/checkVoiceTools.ts",
+    "e2e:ios:install-driver": "appium driver install xcuitest"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.5.5",
+    "@wdio/appium-service": "^9.27.2",
+    "@wdio/cli": "^9.27.2",
+    "@wdio/globals": "^9.27.2",
+    "@wdio/local-runner": "^9.27.2",
+    "@wdio/mocha-framework": "^9.27.2",
+    "@wdio/spec-reporter": "^9.27.2",
+    "appium": "^3.4.2",
+    "appium-xcuitest-driver": "^11.7.3",
+    "tsx": "^4.22.3",
+    "typescript": "^5.5.3",
+    "webdriverio": "^9.27.2"
+  }
+}

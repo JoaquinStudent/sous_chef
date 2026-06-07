@@ -1,0 +1,7 @@
+packages:
+  - "console"
+  - "desktop"
+  - "coder-react"
+  - "multi-react"
+  - "boilersync-react"
+  - "e2e/ios-physical"
