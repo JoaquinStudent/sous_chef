@@ -9,6 +9,7 @@ node_modules/
 dist/
 __pycache__/
 *.py[cod]
+.syncthing.*.tmp
 e2e/ios-physical/.env
 e2e/ios-physical/artifacts/
 e2e/ios-physical/reports/
