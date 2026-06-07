@@ -1,5 +1,5 @@
 {
-  "allowSymlinks": true,
+  "allowSymlinks": false,
   "repos": [
     {
       "name": "allauth-client-swift",
