@@ -1,11 +1,13 @@
 This workspace contains multiple repositories:
 
 - `allauth-client-swift`: SwiftUI client and views for Django AllAuth headless authentication
+- `allauth-client-kotlin`: Kotlin client and views for Django AllAuth headless authentication
 - `cli`: CLI for Openbase Coder.  This runs a Django server that provides git diffs for repos across the file system.
 - `console`: React frontend console for Openbase Coder
 - `coder-react`: Shared React UI package for Openbase Coder components used by the console and desktop clients
 - `desktop`: Electron desktop app for Openbase Coder
 - `ios`: Main Openbase iOS application using Tuist
+- `android`: Main Openbase Android application using Kotlin and Jetpack Compose
 - `skills`: Shared agent skills for Openbase Coder workflows.
 - `super-agents`: Python MCP wrapper for controlling Codex app-server threads, turns, compact status checks, and Super Agents coordination.
 - `multi-react`: Shared React diff viewer and related UI utilities used by Multi and Openbase Coder.
@@ -16,10 +18,10 @@ This workspace is for voice-coding with an iOS app. `openbase-coder-cli` is run 
 Repository visibility and licensing:
 
 - Public, AGPL-3.0-only: `cli`, `console`, `coder-react`, `skills`, `multi-react`, and `boilersync-react`.
-- Public, MIT exceptions: `allauth-client-swift` and `super-agents`.
-- Private/proprietary: `desktop` and `ios`.
+- Public, MIT exceptions: `allauth-client-swift`, `allauth-client-kotlin`, and `super-agents`.
+- Private/proprietary: `android`, `desktop`, and `ios`.
 
-Do not add MIT licensing to any Openbase Coder repo other than `allauth-client-swift` and `super-agents`. The desktop app and iOS app must remain private/proprietary for now and should not contain an open-source project license.
+Do not add MIT licensing to any Openbase Coder repo other than `allauth-client-swift`, `allauth-client-kotlin`, and `super-agents`. The Android app, desktop app, and iOS app must remain private/proprietary for now and should not contain an open-source project license.
 
 Tests under `e2e/` should be true app end-to-end tests: they must drive the iOS app with Appium or drive the browser with Selenium. Do not put direct API, app-server, or service-client integration tests in `e2e/`.
 

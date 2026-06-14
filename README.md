@@ -5,11 +5,13 @@
 This repo is a [multi](https://github.com/montaguegabe/multi) workspace to manage multiple sub-repositories:
 
 - [allauth-client-swift](https://github.com/openbase-community/allauth-client-swift) - SwiftUI client and views for Django AllAuth headless authentication
+- [allauth-client-kotlin](https://github.com/openbase-community/allauth-client-kotlin) - Kotlin client and views for Django AllAuth headless authentication
 - [cli](https://github.com/openbase-community/openbase-coder) - CLI for Openbase Coder. This runs a Django server that provides git diffs for repos across the file system.
 - [console](https://github.com/openbase-community/openbase-coder-console) - React frontend console for Openbase Coder
 - [coder-react](https://github.com/openbase-community/openbase-coder-react) - Shared React UI package for Openbase Coder components used by the console and desktop clients
 - [desktop](https://github.com/openbase-community/openbase-coder-desktop) - Electron desktop app for Openbase Coder
 - [ios](https://github.com/openbase-community/openbase-ios) - Main Openbase iOS application using Tuist
+- [android](https://github.com/openbase-community/openbase-android) - Main Openbase Android application using Kotlin and Jetpack Compose
 - [skills](https://github.com/openbase-community/openbase-coder-skills) - Shared agent skills for Openbase Coder workflows
 - [super-agents](https://github.com/montaguegabe/super-agents) - Python MCP wrapper for controlling Codex app-server threads and Claude Agent SDK/TUI backends
 - [multi-react](https://github.com/montaguegabe/multi-react) - Shared React diff viewer and related UI utilities used by Multi and Openbase Coder

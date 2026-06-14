@@ -10,6 +10,14 @@
       ]
     },
     {
+      "name": "allauth-client-kotlin",
+      "url": "https://github.com/openbase-community/allauth-client-kotlin",
+      "description": "Kotlin client and views for Django AllAuth headless authentication",
+      "installSets": [
+        "dev"
+      ]
+    },
+    {
       "name": "cli",
       "url": "https://github.com/openbase-community/openbase-coder",
       "description": "CLI for Openbase Coder.  This runs a Django server that provides git diffs for repos across the file system.",
@@ -48,6 +56,14 @@
       "name": "ios",
       "url": "https://github.com/openbase-community/openbase-ios",
       "description": "Main Openbase iOS application using Tuist",
+      "installSets": [
+        "dev"
+      ]
+    },
+    {
+      "name": "android",
+      "url": "https://github.com/openbase-community/openbase-android",
+      "description": "Main Openbase Android application using Kotlin and Jetpack Compose",
       "installSets": [
         "dev"
       ]
