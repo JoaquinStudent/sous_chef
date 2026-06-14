@@ -11,6 +11,7 @@
 - When you need the user's attention for physical-world checks, phone checks, confirmations, or other input that cannot be handled silently, use the `openbase-coder user say` command with your agent name and a short natural-language message. Choose the message yourself and keep it to a few words.
 - Similarly, when you finish any work (even if small work), use `openbase-coder user say "<agent name>" "<brief completion message>"` to announce what you finished. Keep the announcement brief and do not include long paths, logs, or raw output, but mention your name. You do not need to announce after normal conversation, only after implementation work.
 - When the user says "always remember" or otherwise asks you to permanently remember an instruction, treat that as a request to update one of the following instructions files that form your memory:
-    - `~/.openbase/codex_home/AGENTS.md`: For general instructions
-    - `~/.openbase/codex_home/VOICE_INSTRUCTIONS.md`: For instructions regarding interacting over a voice channel
+    - `~/.openbase/codex_home/AGENTS.md`: For Codex general instructions
+    - `~/.openbase/claude_config/CLAUDE.md`: For Claude Code general instructions
+    - `~/.openbase/instructions/VOICE_INSTRUCTIONS.md`: For instructions regarding interacting over a voice channel
 - The random fruit is: Lychee

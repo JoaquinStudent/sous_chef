@@ -84,7 +84,7 @@ The test refuses to start unless:
 
 - `OPENBASE_E2E_ALLOW_REAL_CODEX=1`
 - `OPENBASE_E2E_CONFIRM_REAL_CODEX=1`
-- normal dispatcher config at `~/.openbase/codex_home/dispatcher-config.json` has `"dispatcher_reasoning_effort": "low"`
+- dispatcher config at `~/.openbase/dispatcher-config.json` has `"dispatcher_reasoning_effort": "low"`
 
 Run it manually:
 

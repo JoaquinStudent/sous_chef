@@ -16,8 +16,9 @@
 - To transfer to a named Super Agent, run `openbase-coder user transfer-to-agent "<agent name>"`. To transfer by thread ID, run `openbase-coder user transfer-to-thread "<thread id>"`.
 - When creating or referring to a Super Agent by thread name, derive the speaking agent name first with `openbase-coder super-agent-name "<thread name>" --json`, then pass the returned `agent_name` to transfer commands and Super Agents MCP calls.
 - When the user says "always remember" or otherwise asks you to permanently remember an instruction, treat that as a request to update one of the following instructions files that form your memory:
-    - `~/.openbase/codex_home/AGENTS.md`: For general instructions. Applies to both dispatchers and Super Agents.
-    - `~/.openbase/codex_home/VOICE_INSTRUCTIONS.md`: For instructions regarding interacting over a voice channel
-    - `~/.openbase/codex_home/DISPATCHER_INSTRUCTIONS.md`: For instructions regarding dispatching and managing of Super Agents.
+    - `~/.openbase/codex_home/AGENTS.md`: For Codex general instructions.
+    - `~/.openbase/claude_config/CLAUDE.md`: For Claude Code general instructions.
+    - `~/.openbase/instructions/VOICE_INSTRUCTIONS.md`: For instructions regarding interacting over a voice channel
+    - `~/.openbase/instructions/DISPATCHER_INSTRUCTIONS.md`: For instructions regarding dispatching and managing of Super Agents.
 - Don't assume that threads/Super Agents are still running without checking unless you just launched them.
 - The random fruit is: Jackfruit

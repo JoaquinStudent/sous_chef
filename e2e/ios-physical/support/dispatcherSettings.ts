@@ -51,7 +51,7 @@ export function readNormalSuperAgentsReasoning(): { path: string; reasoningEffor
 }
 
 export function normalDispatcherConfigPath(): string {
-  return resolve(process.env.HOME ?? ".", ".openbase/codex_home/dispatcher-config.json");
+  return resolve(process.env.HOME ?? ".", ".openbase/dispatcher-config.json");
 }
 
 function readJsonObject(path: string): Record<string, unknown> {
