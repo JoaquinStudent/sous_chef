@@ -13,4 +13,4 @@
 - When the user says "always remember" or otherwise asks you to permanently remember an instruction, treat that as a request to update one of the following instructions files that form your memory:
     - `~/.openbase/codex_home/AGENTS.md`: For general instructions
     - `~/.openbase/codex_home/VOICE_INSTRUCTIONS.md`: For instructions regarding interacting over a voice channel
-- The random fruit is: Durian
+- The random fruit is: Lychee

@@ -11,7 +11,7 @@ This repo is a [multi](https://github.com/montaguegabe/multi) workspace to manag
 - [desktop](https://github.com/openbase-community/openbase-coder-desktop) - Electron desktop app for Openbase Coder
 - [ios](https://github.com/openbase-community/openbase-ios) - Main Openbase iOS application using Tuist
 - [skills](https://github.com/openbase-community/openbase-coder-skills) - Shared agent skills for Openbase Coder workflows
-- [super-agents](https://github.com/montaguegabe/super-agents) - Python MCP wrapper for controlling Codex app-server threads, plus the packaged Claude backend proxy
+- [super-agents](https://github.com/montaguegabe/super-agents) - Python MCP wrapper for controlling Codex app-server threads and Claude Agent SDK/TUI backends
 - [multi-react](https://github.com/montaguegabe/multi-react) - Shared React diff viewer and related UI utilities used by Multi and Openbase Coder
 - [boilersync-react](https://github.com/montaguegabe/boilersync-react) - Shared React components and utilities for BoilerSync template workflows
 
@@ -21,19 +21,18 @@ Then run `./scripts/setup` from this checkout. The script uses the workspace roo
 that contains it as the Openbase setup workspace, even when the checkout lives
 outside `~/.openbase`.
 
-Default `~/.openbase/codex_home` instruction files are sourced from
+Default `~/.openbase/codex_home` instruction files are symlinked from
 [`instructions/`](instructions/).
 Workspace skills under [`skills/skills/`](skills/skills/) are symlink-installed
 into `~/.openbase/codex_home/skills`.
 
 ## Claude Backend
 
-Openbase Coder setup defaults new installs to the Claude proxy backend. To route
-Openbase Coder, the Codex App Server, and Super Agents through the packaged
-Super Agents Claude proxy explicitly, run:
+Openbase Coder setup defaults new installs to the Claude Agent SDK backend. To
+route Super Agents through the Claude Agent SDK explicitly, run:
 
 ```bash
-openbase-coder setup --backend claude-code-proxy
+openbase-coder setup --backend claude-agent-sdk
 ```
 
 Switch back with:
@@ -42,10 +41,8 @@ Switch back with:
 super-agents-backend use codex
 ```
 
-The Openbase managed `codex-claude-proxy` service keeps
-`super-agents-claude-proxy` running, and `codex-app-server` passes Codex the
-Claude Responses provider config when the Claude proxy backend is selected.
-Restart `codex-app-server` after switching.
+The Claude Agent SDK backend bypasses `codex-app-server`; restart the MCP host
+that runs `super-agents-mcp` after switching.
 
 To bypass Codex app-server entirely and use Claude Code's local TUI backend:
 
