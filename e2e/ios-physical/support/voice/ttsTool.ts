@@ -17,7 +17,7 @@ export async function sayFromOpenbaseApp(env: DeviceEnv, text: string): Promise<
   }
 
   const command = env.ttsCommand ?? defaultOpenbaseCoderCommand();
-  const args = ["user", "say", trimmed];
+  const args = ["user", "say", "dispatcher", trimmed];
   await run(command, args, process.env);
   return { command, args, text: trimmed };
 }
