@@ -32,6 +32,8 @@ skills/
 skills
 super-agents/
 super-agents
+codex-claude-proxy/
+codex-claude-proxy
 multi-react/
 multi-react
 boilersync-react/
@@ -44,8 +46,6 @@ boilersync-react
 .vscode/tasks.json
 .vscode/launch.json
 .vscode/extensions.json
-CLAUDE.md
-AGENTS.md
 # END multi-managed: generated-files
 
 !instructions/AGENTS.md
