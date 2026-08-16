@@ -16,33 +16,21 @@ e2e/ios-physical/artifacts/
 e2e/ios-physical/reports/
 
 # BEGIN multi-managed: repo-directories
-# multi avoids git submodules; each entry has both forms: trailing slash matches directories, bare name matches symlinks/aliases.
-allauth-client-swift/
-allauth-client-swift
-allauth-client-kotlin/
-allauth-client-kotlin
-cli/
-cli
-console/
-console
-coder-react/
-coder-react
-desktop/
-desktop
-ios/
-ios
-android/
-android
-skills/
-skills
-super-agents/
-super-agents
-agent-work-scheduler/
-agent-work-scheduler
-multi-react/
-multi-react
-boilersync-react/
-boilersync-react
+# multi avoids git submodules; the leading slash anchors each entry to the workspace root so it never matches a nested directory of the same name (e.g. .agents/skills). The trailing-slash form matches the repo directory; the bare form matches a root symlink/alias.
+/cli/
+/cli
+/console/
+/console
+/coder-react/
+/coder-react
+/skills/
+/skills
+/super-agents/
+/super-agents
+/multi-react/
+/multi-react
+/boilersync-react/
+/boilersync-react
 # END multi-managed: repo-directories
 
 # BEGIN multi-managed: generated-files

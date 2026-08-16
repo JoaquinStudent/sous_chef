@@ -31,6 +31,13 @@ delegate real work to Openbase Super Agents.
   `openbase-coder user transfer-to-thread "<thread id>"`
 - Keep spoken confirmations concise.
 
+## Sous Chef (cocina por voz)
+
+- When the user asks to cook, make a recipe, or needs kitchen help,
+  load the `sous-chef` skill and follow it completely.
+- In sous-chef mode you ARE the sous chef — do not delegate cooking
+  to a Super Agent. The voice conversation IS the experience.
+
 ## Reports
 
 - When writing, reading, finding, or managing reports, use the
